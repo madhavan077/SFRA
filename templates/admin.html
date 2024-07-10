@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <style>
+        #body{
+            padding: 50px;
+        }
+        p{
+            font-size:45px;
+            font-weight:400;
+        }
+        #buy table{
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            white-space: nowrap;
+        }
+        #buy table img{
+            width: 70px;
+        }
+        #buy table td:nth-child(1){
+            width: 100px;
+            text-align: center;
+        }
+        #buy table td:nth-child(2){
+            width: 150px;
+            text-align: center;
+        }
+        #buy table td:nth-child(3){
+            width: 200px;
+            text-align: center;
+        }
+        #buy table td:nth-child(4){
+            width: 250px;
+            text-align: center;
+        }
+        #buy table thead{
+            border: 1px solid #e2e2e1;
+            border-left: none;
+            border-right: none;
+        }
+        #buy table thead tr td{
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 20px 0;
+        }
+        #buy table tbody tr td{
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#" id="logolink"><div id="logo">TRENDS</div></a>
+        <div id="nav">
+            <ul id="navbar">
+                <li class="homenav"><a href="/home">HOME</a></li>
+                <li class="shopnav"><a href="/shop">Shop</a></li>
+                <li class="cartnav"><a href="/cart">Cart</a></li>
+                <li class="Aregnav"><a href="/login">User</a></li>
+                <li class="adminnav"><a class="active" href="#">Admin</a></li>
+                <li class="alogout"><a href="/alogout">Logout</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="body">
+        <p>{{msg}}</p>
+    </section>
+    <section id="buy" class="section-p">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>user</td>
+                    <td>product-id</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(count): %}
+                <tr>
+                    <td><span>{{id[i]}}</span></td>
+                    <td><span>{{proid[i]}}</span></td>
+                    <td><span>{{price[i]}}</span></td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

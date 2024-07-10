@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRENDZ PRODUCT</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    
+</head>
+<body style="background-color: rgb(233, 223, 234);">
+    <section id="header">
+        <a href="#" id="logolink"><div id="logo">TRENDS</div></a>
+        <div id="nav">
+            <ul id="navbar">
+                <li class="homenav"><a href="/home">Home</a></li>
+                <li class="shopnav"><a class="active" href="/shop">Shop</a></li>
+                <li class="cartnav"><a href="/cart">Cart</a></li>
+                <li class="logoutnav"><a href="/logout">Logout</a></li>
+            </ul>
+        </div> 
+    </section>
+    <section id="product2" class="section-p1">
+        <p style="padding-top: 30px;">Summer collection New Mordern Design</p>
+        <div class="procontainer">
+                <div class="image">
+                    <img src={{img}} alt=""> 
+                </div>
+                <div class="details">
+                    <h5 id="name2">{{name}}</h5>
+                    <h4 id="price2">{{price}}</h4>
+                    <h3 id="prod2"> Product details</h3>
+                    <h5 id="det2">
+                        <ul>
+                            <li>Pull On closure</li>
+                            <li>True To American Regular Fit , Relaxed Feelling ,Above 90% Customers Feel Satisfied With The Fit . If You Are Asian Cutomers , Better To Buy One Size Down .</li>
+                            <li>Made Out Of Premium Quality Polyester Fabric , Comfortable And Quick To Dry .</li>
+                            <li>More Than 20 Colors And Designs Available Including Flowers , Trees , Animals Like Fish And Birds ,Flamingos .</li>
+                            <li>You May Wear The Hawaiian Shirts In Many Occasions Like Working , Traveling ,Party , Or Just Satying At Home .</li>
+                        </ul>
+                    </h5>
+                    <br>
+                    <div class="buttons">
+                    <a href="/buy/{{product}}" class="buy"><button type="button" id="buybutton"><h4>Buy Now</h4></button></a>
+                    <a href="/addcart/{{product}}" class="addcart"><button type="button" id="cartbutton"></button></a>
+                    </div>
+                 </div>
+        </div>
+    </section>
+</body>
+</html>

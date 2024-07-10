@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRENDZ LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .hero{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        .form-box{
+            width: 320px;
+            height: 380px;
+            position: relative;
+            margin: 6% 4%;
+            background-color: #fff;
+            padding: 5px;
+            overflow: hidden;
+            border-radius: 70px;
+        }
+        .button-box{
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px #ff61241f;
+            border-radius: 30px;
+        }
+        .toggle-btn{
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+        #btn{
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: linear-gradient(to right, #ff105f,#ffad06);
+            border-radius: 30px;
+            transition: .5s;
+        }
+        .input-group{
+            top: 140px;
+            align-items: center;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
+            padding-right: 40px;
+        }
+        .input-field{
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            background: transparent;
+        }
+        .submit-btn{
+            width: 75%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right,#ff105f,#ffad06);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+        #login{
+            left:50px;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#" id="logolink"><div id="logo">TRENDS</div></a>
+        <div id="nav">
+            <ul id="navbar">
+                <li class="homenav"><a href="/home">Home</a></li>
+                <li class="shopnav"><a href="/shop">Shop</a></li>
+                <li class="cartnav"><a href="/cart">Cart</a></li>
+                <li class="adminnav"><a href="/alogin">Admin</a></li>
+                <li class="loginnav"><a class="active" href="/login">Login</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="hero">
+        <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <a href="/login" style="font-size: 13px;"><button type="button" class="toggle-btn" >Log In</button></a>
+                        <a href="/register" style="font-size: 13px;"><button type="button" class="toggle-btn" >Register</button></a>
+                    </div>
+                    <div id="msg">{{msg}}</div>
+                    <form id="login" action="/login" method="post" class="input-group">
+                        <input type="text" name="username" class="input-field" placeholder="Enter Username" required>
+                        <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
+                        <button type="submit" class="submit-btn">Log In</button>
+                    </form>
+        </div>
+    </section>
+    <!--
+        <div class="fproducts">
+            <div class="title">Upload Product</div>
+            <form action="/proupt" method="POST" class="form">
+                <div class="ud">
+                    <label for="pname">Product Name</label>
+                    <input type="text" name="pname" class="input-field">
+                </div>
+                <div class="ud">
+                    <label for="pprice">Price</label>
+                    <input type="text" name="pprice" class="input-field">
+                </div>
+                <div class="ud">
+                    <label for="pdesc">Description</label>
+                    <input type="text" name="pdesc" class="input-field">
+                </div>
+                <div class="ud">
+                    <label for="pquantity">Product Quantity</label>
+                    <input type="text" name="pquantity" class="input-field">
+                </div>
+            </form>
+        </div>
+    -->
+    <!--<script>b
+        var x=document.getElementById("login");
+        var y=document.getElementById("register");
+        var z=document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>-->
+</body>
+</html>

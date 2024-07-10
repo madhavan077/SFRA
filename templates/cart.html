@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <style>
+        #cart{
+            padding-top: 6%;
+        }
+        #cart table{
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            white-space: nowrap;
+        }
+        #cart table img{
+            width: 70px;
+        }
+        #cart table td:nth-child(1){
+            width: 100px;
+            text-align: center;
+        }
+        #cart table td:nth-child(2){
+            width: 150px;
+            text-align: center;
+        }
+        #cart table td:nth-child(3){
+            width: 200px;
+            text-align: center;
+        }
+        #cart table td:nth-child(4){
+            width: 250px;
+            text-align: center;
+        }
+        #cart table thead{
+            border: 1px solid #e2e2e1;
+            border-left: none;
+            border-right: none;
+        }
+        #cart table thead tr td{
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 20px 0;
+        }
+        #cart table tbody tr td{
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#" id="logolink"><div id="logo">TRENDS</div></a>
+        <div id="nav">
+            <ul id="navbar">
+                <li class="homenav"><a href="/home">Home</a></li>
+                <li class="shopnav"><a  href="/shop">Shop</a></li>
+                <li class="cartnav"><a class="active" href="/cart">Cart</a></li>
+                <li class="logoutnav"><a href="/logout">Logout</a></li>
+            </ul>
+        </div> 
+    </section>
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead> 
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(count): %}
+                <tr>
+                    <td><a href="/remove/<{{name[i]}}>"><button style="background-color:transparent; border:0"><img src="../static/img/delete.png" style="width: 25px; cursor: pointer;"></button></a></td>
+                    <td><img src={{link[i]}}></td>
+                    <td><span>{{proname[i]}}</span></td>
+                    <td><span>{{price[i]}}</span></td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
