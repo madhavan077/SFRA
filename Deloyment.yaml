@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sfra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+     app: sfra
+  template:
+    metadata:
+      labels:
+        app: sfra
+    spec:
+      containers:
+      - name: sfra
+        image: au.icr.io/sajeeth/sfra
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
